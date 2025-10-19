@@ -1,0 +1,27 @@
+{
+  "name": "luxen-business-manager",
+  "version": "1.0.0",
+  "description": "LUXEN Smart Business Manager - Complete Business Management System",
+  "private": true,
+  "scripts": {
+    "install-all": "cd luxen_web_app && npm install && cd ../luxen_backend && pip install -r requirements.txt",
+    "start-backend": "cd luxen_backend && python run.py",
+    "start-frontend": "cd luxen_web_app && npm start",
+    "dev": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "build": "cd luxen_web_app && npm run build",
+    "deploy": "cd luxen_web_app && npm run deploy"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "business-management",
+    "led-manufacturing",
+    "react",
+    "python",
+    "firebase",
+    "luxen"
+  ],
+  "author": "LUXEN Development Team",
+  "license": "PROPRIETARY"
+}

@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow authenticated users to read/write their own owner document
+    match /owners/{uid} {
+      allow read, write: if request.auth.uid == uid;
+      allow read: if request.auth != null;
+    }
+    
+    // Allow authenticated users to read/write production documents
+    match /production/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Allow authenticated users to read/write sales documents
+    match /sales/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Allow authenticated users to read/write expense documents
+    match /expenses/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Allow authenticated users to read/write warranty documents
+    match /warranty/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Allow authenticated users to read/write report documents
+    match /reports/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+

@@ -1,0 +1,31 @@
+# Dependencies
+/node_modules
+/luxen_web_app/node_modules
+/luxen_backend/venv
+/luxen_backend/__pycache__
+
+# Build artifacts
+/luxen_web_app/build
+/luxen_web_app/dist
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+luxen_backend/.env
+luxen_web_app/.env
+
+# Firebase
+luxen_backend/serviceAccountKey.json
+
+# IDE config
+.vscode/
+.idea/
